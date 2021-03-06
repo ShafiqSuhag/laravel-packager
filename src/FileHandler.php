@@ -169,9 +169,10 @@ trait FileHandler
      **/
     public function renameFiles($manifest = null)
     {
+        // componentStudly new function added
         $bindings = [
-            ['MyVendor', 'MyPackage', 'myvendor', 'mypackage'],
-            [$this->vendorStudly(), $this->packageStudly(), strtolower($this->vendor()), strtolower($this->package())],
+            ['MyVendor', 'MyPackage', 'myvendor', 'mypackage','MyComponent'],
+            [$this->vendorStudly(), $this->packageStudly(), strtolower($this->vendor()), strtolower($this->package()),$this->componentStudly()],
         ];
 
         $files = new RecursiveDirectoryIterator($this->packagePath());

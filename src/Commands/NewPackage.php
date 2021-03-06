@@ -125,6 +125,7 @@ class NewPackage extends Command
             ':lc:package',
             ':kc:vendor',
             ':kc:package',
+            ':uc:vuecomponent',
         ], [
             $this->conveyor->vendorStudly(),
             $this->conveyor->packageStudly(),
@@ -132,6 +133,7 @@ class NewPackage extends Command
             strtolower($this->conveyor->package()),
             $this->conveyor->vendorKebab(),
             $this->conveyor->packageKebab(),
+            $this->conveyor->componentStudly(),
         ]);
 
         if ($this->option('i')) {
