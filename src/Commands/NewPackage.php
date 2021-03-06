@@ -142,11 +142,13 @@ class NewPackage extends Command
                 ':author_email',
                 ':author_homepage',
                 ':license',
+                ':component_name',
             ], [
                 config('packager.author_name'),
                 config('packager.author_email'),
                 config('packager.author_homepage'),
                 config('packager.license'),
+                config('component_name'),
             ]);
         }
 
@@ -182,6 +184,8 @@ class NewPackage extends Command
         $authorHomepage = $this->ask('What is the author\'s website?', config('packager.author_homepage'));
         $description = $this->ask('How would you describe the package?');
         $license = $this->ask('Under which license will it be released?', config('packager.license'));
+        $vuecomponent = $this->ask('What is the vue component name?', config('packager.component_name'));
+        
 
         $this->wrapping->replace([
             ':author_name',
@@ -189,12 +193,14 @@ class NewPackage extends Command
             ':author_homepage',
             ':package_description',
             ':license',
+            ':component_name',
         ], [
             $author,
             $authorEmail,
             $authorHomepage,
             $description,
             $license,
+            $vuecomponent,
         ]);
     }
 
