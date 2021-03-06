@@ -67,7 +67,9 @@ class DisablePackage extends Command
         // Defining vendor/package
         $this->conveyor->vendor($this->argument('vendor'));
         $this->conveyor->package($this->argument('name'));
+        $this->conveyor->vuecomponent($this->argument('vuecomponent'));
 
+        
         // Start removing the package
         $this->info('Disabling package '.$this->conveyor->vendor().'\\'.$this->conveyor->package().'...');
         $this->makeProgress();
