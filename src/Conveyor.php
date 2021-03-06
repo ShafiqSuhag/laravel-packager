@@ -15,14 +15,6 @@ class Conveyor
      * @var string
      */
     protected $vendor;
-
-    /**
-     * Package vuecomponent namespace.
-     *
-     * @var string
-     */
-    protected $vuecomponent;
-
     /**
      * Package name.
      *
@@ -57,36 +49,6 @@ class Conveyor
     {
         return Str::studly($this->vendor());
     }
-
-    // vuecomponent Start
-    /**
-     * Set or get the package vendor namespace.
-     *
-     * @param string $vendor
-     *
-     * @return string|RuntimeException
-     */
-    public function vuecomponent($vuecomponent = null)
-    {
-        if ($vuecomponent !== null) {
-            return $this->vuecomponent = $vuecomponent;
-        }
-        if ($this->vuecomponent === null) {
-            throw new RuntimeException('Please provide a vuecomponent name');
-        }
-
-        return $this->vuecomponent;
-    }
-    /**
-     * Get the vendor name converted to StudlyCase.
-     *
-     * @return string|RuntimeException
-     */
-    public function componentStudly()
-    {
-        return Str::studly($this->vuecomponent());
-    }
-    
 
     /**
      * Get the vendor name converted to kebab-case.

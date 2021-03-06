@@ -67,7 +67,6 @@ class NewPackage extends Command
 
         $vendor = $this->argument('vendor');
         $name = $this->argument('name');
-        $vuecomponent = $this->argument('vuecomponent');
 
         if (strstr($vendor, '/')) {
             [$vendor, $name] = explode('/', $vendor);
@@ -77,11 +76,9 @@ class NewPackage extends Command
         if ($this->option('i')) {
             $this->conveyor->vendor($this->ask('What will be the vendor name?', $vendor));
             $this->conveyor->package($this->ask('What will be the package name?', $name));
-            $this->conveyor->vuecomponent($this->ask('What will be the vue file name?', $vuecomponent));
         } else {
             $this->conveyor->vendor($vendor);
             $this->conveyor->package($name);
-            $this->conveyor->vuecomponent($vuecomponent);
         }
 
         // Validate the vendor and package names
@@ -128,7 +125,6 @@ class NewPackage extends Command
             ':lc:package',
             ':kc:vendor',
             ':kc:package',
-            ':uc:vuecomponent',
         ], [
             $this->conveyor->vendorStudly(),
             $this->conveyor->packageStudly(),
@@ -136,7 +132,6 @@ class NewPackage extends Command
             strtolower($this->conveyor->package()),
             $this->conveyor->vendorKebab(),
             $this->conveyor->packageKebab(),
-            $this->conveyor->componentStudly(),
         ]);
 
         if ($this->option('i')) {

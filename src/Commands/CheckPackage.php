@@ -39,7 +39,6 @@ class CheckPackage extends Command
         $formatter = new SimpleFormatter($this->getHelperSet()->get('formatter'));
         $vendor = $this->argument('vendor');
         $name = $this->argument('name');
-        $vuecomponent = $this->argument('vuecomponent');
         $lockfile = getcwd().'/packages/'.$vendor.'/'.$name.'/composer.lock';
         $vulnerabilities = $checker->check($lockfile);
 
