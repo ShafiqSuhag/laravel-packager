@@ -17,6 +17,13 @@ class Conveyor
     protected $vendor;
 
     /**
+     * Package vuecomponent namespace.
+     *
+     * @var string
+     */
+    protected $vuecomponent;
+
+    /**
      * Package name.
      *
      * @var string
@@ -36,7 +43,7 @@ class Conveyor
             return $this->vendor = $vendor;
         }
         if ($this->vendor === null) {
-            throw new RuntimeException('Please provide a vendor');
+            throw new RuntimeException('Please provide a vendor 2');
         }
 
         return $this->vendor;
@@ -68,7 +75,7 @@ class Conveyor
             throw new RuntimeException('Please provide a vuecomponent name');
         }
 
-        return $this->vendor;
+        return $this->vuecomponent;
     }
     /**
      * Get the vendor name converted to StudlyCase.
