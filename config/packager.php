@@ -25,8 +25,8 @@ return [
     /*
      * You can set defaults for the following placeholders.
      */
-    'author_name' => 'author name',
-    'author_email' => 'author email',
-    'author_homepage' => 'author homepage',
+    'author_name' => 'Shafiq Suhag',
+    'author_email' => 'shafiqsuhag@gmail.com',
+    'author_homepage' => 'http://shafiqsuahg.com',
     'license' => 'license',
 ];
