@@ -87,7 +87,7 @@ class IntegratedTest extends TestCase
         Artisan::call('packager:new', [
             'vendor' => 'AnotherVendor',
             'name' => 'AnotherPackage',
-            '--skeleton' => 'http://github.com/Jeroen-G/packager-skeleton/archive/master.zip',
+            '--skeleton' => 'http://github.com/ShafiqSuhag/laravel-vue-skeleton/archive/master.zip',
         ]);
 
         $composer = file_get_contents(base_path('composer.json'));

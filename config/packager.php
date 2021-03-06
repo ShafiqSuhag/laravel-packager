@@ -6,7 +6,7 @@ return [
      * The following skeleton will be downloaded for each new package.
      * Default: http://github.com/Jeroen-G/packager-skeleton/archive/master.zip
      */
-    'skeleton' => 'http://github.com/Jeroen-G/packager-skeleton/archive/master.zip',
+    'skeleton' => 'http://github.com/ShafiqSuhag/laravel-vue-skeleton/archive/master.zip',
 
     /*
      * When you run into issues downloading the skeleton, this might be because of
