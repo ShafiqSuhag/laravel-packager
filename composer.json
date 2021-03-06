@@ -1,0 +1,53 @@
+{
+    "name": "shafiqsuhag/laravel-packager",
+    "description": "A cli tool for creating Laravel packages.",
+    "keywords": [
+        "shafiqsuhag"
+    ],
+    "homepage": "https://github.com/shafiqsuhag/laravel-packager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shafiq Suhag",
+            "email": "shafiqsuhag@gmail.com",
+            "homepage": "https://shafiqsuhag.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-zip": "*",
+        "ext-json": "*",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
+        "guzzlehttp/guzzle": "~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "orchestra/testbench": ">=3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeroenG\\Packager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeroenG\\Packager\\Tests\\": "tests"
+        }
+    },
+    "suggest": {
+        "sensiolabs/security-checker": "Required to use the security check command"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --no-coverage",
+        "test-f": "vendor/bin/phpunit --no-coverage --filter",
+        "test-coverage": "vendor/bin/phpunit",
+        "test-coverage-f": "vendor/bin/phpunit --filter"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeroenG\\Packager\\PackagerServiceProvider"
+            ]
+        }
+    }
+}
